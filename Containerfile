@@ -1,7 +1,7 @@
 FROM quay.io/jupyter/base-notebook:latest
 
 USER root
-RUN apt-get update && apt-get install -y --no-install-recommends ruby-full build-essential libssl-dev libreadline-dev zlib1g-dev \
+RUN apt-get update && apt-get install -y --no-install-recommends ruby-full build-essential libssl-dev libreadline-dev zlib1g-dev libzmq3-dev \
 		   && apt-get clean \
 		   && rm -rf /var/lib/apt/lists/*
 
