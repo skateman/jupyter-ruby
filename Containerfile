@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ruby-full build
 		   && apt-get clean \
 		   && rm -rf /var/lib/apt/lists/* \
                    && gem install iruby \
+                   && gem update irb \
                    && iruby register --force \
                    && chown -R ${NB_UID}:${NB_GID} /home/jovyan
 
